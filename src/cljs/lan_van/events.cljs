@@ -49,7 +49,7 @@
      (merge {}
             (when (= van-status :tracking)
               {:http-xhrio {:method :get
-                            :uri "http://192.168.0.11:8080/api/v1/van/location"
+                            :uri "/api/v1/van/location"
                             :format (ajax/json-request-format)
                             :response-format (ajax/json-response-format {:keywords? true})
                             :on-success [::set-van-location]
@@ -80,7 +80,7 @@
      (merge {}
             (when (= van-status :tracking)
               {:http-xhrio {:method :get
-                            :uri "http://192.168.0.11:8080/api/v1/dropups/current"
+                            :uri "/api/v1/dropups/current"
                             :format (ajax/json-request-format)
                             :response-format (ajax/json-response-format {:keywords? true})
                             :on-success [::set-current-dropup]
@@ -98,7 +98,7 @@
  [check-spec-interceptor]
  (fn [_ _]
    {:http-xhrio {:method :get
-                 :uri "http://192.168.0.11:8080/api/v1/dropups"
+                 :uri "/api/v1/dropups"
                  :format (ajax/json-request-format)
                  :response-format (ajax/json-response-format {:keywords? true})
                  :on-success [::set-dropups]
@@ -116,7 +116,7 @@
  [check-spec-interceptor]
  (fn [_ _]
    {:http-xhrio {:method :get
-                 :uri "http://192.168.0.11:8080/api/v1/van/status"
+                 :uri "/api/v1/van/status"
                  :format (ajax/json-request-format)
                  :response-format (ajax/json-response-format {:keywords? true})
                  :on-success [::set-van-status]
