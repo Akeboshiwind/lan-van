@@ -29,8 +29,7 @@
 
 (s/def ::van-status
   #{:tracking
-    :disconnected
-    :connected})
+    :disconnected})
 
 (s/def ::width int?)
 (s/def ::height int?)
