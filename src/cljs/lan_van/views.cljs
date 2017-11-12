@@ -91,9 +91,10 @@
 (defn dropups
   [opts]
   (let [dropups (subscribe [::subs/dropups])
-        current (subscribe [::subs/current])]
+        current (subscribe [::subs/current])
+        height (subscribe [::subs/height])]
     (fn []
-      [:div#dropouts opts
+      [:div#dropouts (merge opts {:style {:height (str @height "px")}})
        [:table
         [:thead
          [:tr
