@@ -116,10 +116,10 @@
     (fn []
       [:div#play-button
        {:on-click (fn []
-                    (dispatch [::events/toggle-music]))}
-       (if-not @playing?
-         "play"
-         "pause")])))
+                    (dispatch [::events/toggle-music]))
+        :class (if @playing?
+                 "playing"
+                 "paused")}])))
 
 (defn main-panel []
   [:div

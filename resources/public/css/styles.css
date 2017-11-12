@@ -52,6 +52,18 @@ body {
     top: 0;
     left: 0;
     z-index: 101;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 33px;
+}
+
+.paused {
+    background-image: url("/images/SadNyan.gif")
+}
+
+.playing {
+    background-image: url("/images/NyanCat.gif")
 }
 
 .overlay {
