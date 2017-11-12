@@ -110,9 +110,21 @@
                [:td (str/join ", " names)]
                [:td (:time d)]])))]]])))
 
+(defn play-button
+  []
+  (let [playing? (subscribe [::subs/playing?])]
+    (fn []
+      [:div#play-button
+       {:on-click (fn []
+                    (dispatch [::events/toggle-music]))}
+       (if-not @playing?
+         "play"
+         "pause")])))
+
 (defn main-panel []
   [:div
    [:div.container-fluid
     [:div.row.row-no-padding
      [gmap-outer {:class "col-sm-10 col-xs-12"}]
-     [dropups {:class "col-sm-2 col-xs-12 pre-scrollable"}]]]])
+     [dropups {:class "col-sm-2 col-xs-12 pre-scrollable"}]
+     [play-button]]]])

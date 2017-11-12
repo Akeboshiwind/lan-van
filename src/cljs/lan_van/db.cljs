@@ -38,12 +38,15 @@
   (s/keys :req-un [::width
                    ::height]))
 
+(s/def ::playing? boolean?)
+
 (s/def ::db
   (s/keys :req-un [::location
                    ::dropups
                    ::current
                    ::van-status
-                   ::window]))
+                   ::window
+                   ::playing?]))
 
 
 (def default-db
@@ -53,4 +56,5 @@
    :current -1
    :van-status :disconnected
    :window {:width 0
-            :height 400}})
+            :height 400}
+   :playing? false})

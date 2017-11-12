@@ -121,3 +121,12 @@
                  :response-format (ajax/json-response-format {:keywords? true})
                  :on-success [::set-van-status]
                  :on-failure [::xhrio-error]}}))
+
+(reg-event-fx
+ ::toggle-music
+ [check-spec-interceptor]
+ (fn [cofx _]
+   (let [db (:db cofx)
+         playing? (not (:playing? db))]
+     {:db (assoc db :playing? playing?)
+      ::e/play-nyan-music? playing?})))

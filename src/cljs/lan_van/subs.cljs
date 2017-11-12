@@ -37,3 +37,8 @@
  ::van-status
  (fn [db]
    (:van-status db)))
+
+(reg-sub
+ ::playing?
+ (fn [db]
+   (:playing? db)))
