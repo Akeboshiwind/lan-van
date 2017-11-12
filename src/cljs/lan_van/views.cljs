@@ -126,5 +126,5 @@
    [:div.container-fluid
     [:div.row.row-no-padding
      [gmap-outer {:class "col-sm-10 col-xs-12"}]
-     [dropups {:class "col-sm-2 col-xs-12 pre-scrollable"}]
+     [dropups {:class "col-sm-2 col-xs-12"}]
      [play-button]]]])
