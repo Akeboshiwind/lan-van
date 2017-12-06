@@ -1,4 +1,4 @@
-(defproject lan-van "1.1.0"
+(defproject lan-van "1.2.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.908"]
                  [expound "0.3.1"]
