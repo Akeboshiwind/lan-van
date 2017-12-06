@@ -32,7 +32,6 @@
  (fn [db [location]]
    (assoc db :location location)))
 
-
 (reg-event-fx
  ::xhrio-error
  [check-spec-interceptor
