@@ -18,7 +18,5 @@
 
 (defn ^:export init []
   (re-frame/dispatch-sync [::events/initialize-db])
-  (re-frame/dispatch-sync [::events/window-resize])
-  (re-frame/dispatch-sync [::events/get-dropups])
   (dev-setup)
   (mount-root))

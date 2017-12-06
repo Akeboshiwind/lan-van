@@ -19,11 +19,15 @@
 
 (def check-spec-interceptor (rf/after (partial check-and-throw :lan-van.db/db)))
 
-(reg-event-db
+(reg-event-fx
  ::initialize-db
  [check-spec-interceptor]
- (fn  [_ _]
-   db/default-db))
+ (fn [cofx _]
+   {:db db/default-db
+    ;; There may be a race condition here possibly in a future update
+    :dispatch-n [[::window-resize]
+                 [::get-dropups]
+                 [::check-christmas]]}))
 
 (reg-event-db
  ::set-van-location
