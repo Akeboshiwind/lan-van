@@ -133,3 +133,12 @@
          playing? (not (:playing? db))]
      {:db (assoc db :playing? playing?)
       ::e/play-nyan-music? playing?})))
+
+(reg-event-fx
+ ::check-christmas
+ [check-spec-interceptor
+  (inject-cofx ::ce/month)]
+ (fn [cofx _]
+   (let [db (:db cofx)
+         month (:month cofx)]
+     {:db (assoc db :christmas? (= month :december))})))

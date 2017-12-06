@@ -40,13 +40,16 @@
 
 (s/def ::playing? boolean?)
 
+(s/def ::christmas? boolean?)
+
 (s/def ::db
   (s/keys :req-un [::location
                    ::dropups
                    ::current
                    ::van-status
                    ::window
-                   ::playing?]))
+                   ::playing?
+                   ::christmas?]))
 
 
 (def default-db
@@ -57,4 +60,5 @@
    :van-status :disconnected
    :window {:width 0
             :height 400}
-   :playing? false})
+   :playing? false
+   :christmas? false})

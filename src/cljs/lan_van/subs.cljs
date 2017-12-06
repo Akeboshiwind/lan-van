@@ -42,3 +42,8 @@
  ::playing?
  (fn [db]
    (:playing? db)))
+
+(reg-sub
+ ::christmas?
+ (fn [db]
+   (:christmas? db)))
