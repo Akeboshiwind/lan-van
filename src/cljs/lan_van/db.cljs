@@ -50,8 +50,8 @@
 
 
 (def default-db
-  {:location {:latitude 0
-              :longitude 0}
+  {:location {:latitude 52.769640
+              :longitude -1.227608}
    :dropups []
    :current -1
    :van-status :disconnected
