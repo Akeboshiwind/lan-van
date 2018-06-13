@@ -2,38 +2,32 @@
 
 A [re-frame](https://github.com/Day8/re-frame) application designed to show the location of the lan van.
 
-## Development Mode
+Notice: A quick project hacked together over a week or two.
 
-### Start Cider from Emacs:
+## Prerequisites
 
-Put this in your Emacs config file:
+You will need [Leiningen][1] 2.0 or above installed.
 
-```
-(setq cider-cljs-lein-repl
-	"(do (require 'figwheel-sidecar.repl-api)
-         (figwheel-sidecar.repl-api/start-figwheel!)
-         (figwheel-sidecar.repl-api/cljs-repl))")
-```
+[1]: https://github.com/technomancy/leiningen
 
-Navigate to a clojurescript file and start a figwheel REPL with `cider-jack-in-clojurescript` or (`C-c M-J`)
+## Running
 
-### Run application:
+To start a web server for the application, run:
 
-```
-lein clean
-lein figwheel dev
-```
+    lein clean
+    lein figwheel dev
 
-Figwheel will automatically push cljs changes to the browser.
+Or build the application using:
 
-Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
+    lein cljsbbuild once min
 
-## Production Build
+And host the files in the `/resouces` directory.
 
+## Online Version
+[https://lanvan.lsucs.org.uk/](https://lanvan.lsucs.org.uk/)
 
-To compile clojurescript to javascript:
-
-```
-lein clean
-lein cljsbuild once min
-```
+## Picture
+### Login
+![Online](./images/online.png)
+### App
+![Offline](./images/offline.png)
