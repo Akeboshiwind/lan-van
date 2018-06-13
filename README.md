@@ -27,7 +27,7 @@ And host the files in the `/resouces` directory.
 [https://lanvan.lsucs.org.uk/](https://lanvan.lsucs.org.uk/)
 
 ## Picture
-### Login
+### Online
 ![Online](./images/online.png)
-### App
+### Offline
 ![Offline](./images/offline.png)
